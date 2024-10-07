@@ -1,0 +1,3 @@
+base-path = "pages"
+default = "latest"
+vanguard = ["latest"]
