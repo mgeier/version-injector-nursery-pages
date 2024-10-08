@@ -1,3 +1,4 @@
 base-path = "pages"
 default = "latest"
 vanguard = ["latest"]
+variants = ["my-variant"]
