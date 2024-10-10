@@ -1,4 +1,4 @@
 base-path = "pages"
 base-url = "/version-injector-nursery"
 vanguard = ["latest"]
-variants = ["your-variant","my-variant"]
+variants = ["0.0.0-rc1","your-variant","my-variant"]
