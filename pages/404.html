@@ -7,14 +7,14 @@
       const pathname = window.location.pathname;
       document.getElementById("requested").innerHTML = href;
       if (false) {}
-      else if (pathname.startsWith("/latest")) {}
-      else if (pathname.startsWith("/0.0.0-rc2")) {}
-      else if (pathname.startsWith("/0.0.0-rc1")) {}
-      else if (pathname.startsWith("/redirect-via-404")) {}
-      else if (pathname.startsWith("/your-variant")) {}
-      else if (pathname.startsWith("/my-variant")) {}
+      else if (pathname.startsWith("/version-injector-nursery/latest")) {}
+      else if (pathname.startsWith("/version-injector-nursery/0.0.0-rc2")) {}
+      else if (pathname.startsWith("/version-injector-nursery/0.0.0-rc1")) {}
+      else if (pathname.startsWith("/version-injector-nursery/redirect-via-404")) {}
+      else if (pathname.startsWith("/version-injector-nursery/your-variant")) {}
+      else if (pathname.startsWith("/version-injector-nursery/my-variant")) {}
       else {
-        const redirecting = '/0.0.0-rc2' + pathname;
+        const redirecting = '/version-injector-nursery/0.0.0-rc2' + pathname;
         let body = document.querySelector("body");
         body.innerHTML = "Redirecting to <code>" + redirecting + "</code>";
         window.location.pathname = redirecting;
