@@ -2,17 +2,20 @@
 <head>
   <title>Error 404 (Resource not found)</title>
   <script>
-    window.onload = function () {
-      const href = window.location.href;
-      const pathname = window.location.pathname;
-      document.getElementById("requested").innerHTML = href;
+    window.onload = () => {
+      document.getElementById("requested").innerHTML = window.location.href;
+      let pathname = window.location.pathname;
+      if (!pathname.startsWith("/version-injector-nursery/")) {
+        throw new Error("This 404 page should only be used within '/version-injector-nursery/'");
+      }
+      pathname = pathname.slice(25);
       if (false) {}
-      else if (pathname.startsWith("/version-injector-nursery/latest")) {}
-      else if (pathname.startsWith("/version-injector-nursery/0.0.0-rc2")) {}
-      else if (pathname.startsWith("/version-injector-nursery/0.0.0-rc1")) {}
-      else if (pathname.startsWith("/version-injector-nursery/redirect-via-404")) {}
-      else if (pathname.startsWith("/version-injector-nursery/your-variant")) {}
-      else if (pathname.startsWith("/version-injector-nursery/my-variant")) {}
+      else if (pathname.startsWith("/latest")) {}
+      else if (pathname.startsWith("/0.0.0-rc2")) {}
+      else if (pathname.startsWith("/0.0.0-rc1")) {}
+      else if (pathname.startsWith("/redirect-via-404")) {}
+      else if (pathname.startsWith("/your-variant")) {}
+      else if (pathname.startsWith("/my-variant")) {}
       else {
         const redirecting = '/version-injector-nursery/0.0.0-rc2' + pathname;
         let body = document.querySelector("body");
