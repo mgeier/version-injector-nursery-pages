@@ -8,6 +8,7 @@ versions = [
 ]
 versions-warning = "versions-warning.html"
 variants = [
+    "pull-request",
     "redirect-via-404",
     "your-variant",
     "my-variant",
