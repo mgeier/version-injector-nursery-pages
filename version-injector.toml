@@ -1,5 +1,3 @@
-base-path = "pages"
-base-url = "/version-injector-nursery"
 vanguard = ["latest"]
 vanguard-warning = "vanguard-warning.html"
 versions = [
