@@ -14,10 +14,10 @@
       if (pathname.startsWith("/latest/")) { pathname_suffix = pathname.slice(7); } else { alternative_versions.push("latest"); }
       if (pathname.startsWith("/0.0.0-rc2/")) { pathname_suffix = pathname.slice(10); } else { alternative_versions.push("0.0.0-rc2"); }
       if (pathname.startsWith("/0.0.0-rc1/")) { pathname_suffix = pathname.slice(10); } else { alternative_versions.push("0.0.0-rc1"); }
+      if (pathname.startsWith("/my-variant/")) { pathname_suffix = pathname.slice(11); } else { alternative_versions.push("my-variant"); }
       if (pathname.startsWith("/pull-request/")) { pathname_suffix = pathname.slice(13); } else { alternative_versions.push("pull-request"); }
       if (pathname.startsWith("/redirect-via-404/")) { pathname_suffix = pathname.slice(17); } else { alternative_versions.push("redirect-via-404"); }
       if (pathname.startsWith("/your-variant/")) { pathname_suffix = pathname.slice(13); } else { alternative_versions.push("your-variant"); }
-      if (pathname.startsWith("/my-variant/")) { pathname_suffix = pathname.slice(11); } else { alternative_versions.push("my-variant"); }
       if (pathname_suffix === "") {
         const redirecting = "/version-injector-nursery/0.0.0-rc2" + pathname;
         document.body.innerHTML = "Redirecting to <code>" + redirecting + "</code>";
